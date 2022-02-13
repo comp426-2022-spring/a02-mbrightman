@@ -92,13 +92,13 @@ export function flipACoin(call) {
   var flip = (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
   if (flip == call) {
     return {
-      'call': call[0],
+      'call': call,
       'flip': flip,
       'result': 'win'
     }
   } else {
     return {
-      'call': call[0],
+      'call': call,
       'flip': flip,
       'result': 'lose'
     }

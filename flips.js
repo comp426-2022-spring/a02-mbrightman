@@ -5,7 +5,11 @@ const require = createRequire(import.meta.url)
 const args = require('minimist')(process.argv.slice(2))
 const number = args['number']
 
-var coinsArray = coinFlips(number)
+if (number === undefined) {
+    coinsArray = coinFlips(1)
+} else {
+    var coinsArray = coinFlips(number)
+}
 var coinsSummary = countFlips(coinsArray)
 
 console.log(coinsArray)
