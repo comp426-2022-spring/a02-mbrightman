@@ -71,9 +71,19 @@ export function countFlips(array) {
     }
   }
 
-  return {
-    'tails': tCounter,
-    'heads': hCounter
+  if (tCounter === 0) {
+    return {
+      'heads': hCounter
+    }
+  } else if (hCounter === 0) {
+    return {
+      'tails': tCounter
+    }
+  } else {
+    return {
+      'tails': tCounter,
+      'heads': hCounter
+    }
   }
 }
 
